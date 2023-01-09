@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mysecondapp.UsersTableController">
+    <children>
+        <AnchorPane layoutY="110.0" prefHeight="290.0" prefWidth="700.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <TableView layoutX="15.0" layoutY="50.0" prefHeight="234.0" prefWidth="670.0">
+              <columns>
+                <TableColumn fx:id="idColumn" maxWidth="70.0" prefWidth="70.0" text="ID" />
+                <TableColumn fx:id="nameColumn" maxWidth="100.0" prefWidth="100.0" text="Name" />
+                  <TableColumn fx:id="lastnameColumn" maxWidth="100.0" prefWidth="100.0" text="Last Name" />
+                  <TableColumn fx:id="loginColumn" maxWidth="100.0" prefWidth="100.0" text="Login" />
+                  <TableColumn fx:id="passwordColumn" maxWidth="100.0" prefWidth="100.0" text="Password" />
+                  <TableColumn fx:id="locationColumn" maxWidth="100.0" prefWidth="100.0" text="Location" />
+                  <TableColumn fx:id="genderColumn" maxWidth="100.0" prefWidth="100.0" text="Gender" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="188.0" spacing="20.0" AnchorPane.leftAnchor="10.0">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="42.0" onMouseClicked="#getAddView" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../assets/user-with-plus-sign.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="42.0" onMouseClicked="#refreshTable" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../assets/reload.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+        </AnchorPane>
+        <Label layoutX="198.0" layoutY="14.0" text="Users Table" textFill="WHITE">
+            <font>
+                <Font name="Jokerman" size="56.0" />
+            </font>
+        </Label>
+      <ImageView fitHeight="50.0" fitWidth="42.0" layoutX="644.0" layoutY="14.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/closed.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
