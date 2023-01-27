@@ -3,6 +3,7 @@ package com.example.mysecondapp;
 public class User {
     private String firstName;
     private String lastName;
+
     private String userName;
     private String password;
     private String location;
@@ -74,6 +75,18 @@ public class User {
         this.password = password;
         this.location = location;
         this.gender = gender;
+    }
+
+    public User( Long id, String firstName, String lastName, String userName, String password, String location, String gender) {
+
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.password = password;
+        this.location = location;
+        this.gender = gender;
+
     }
 
     public User() {

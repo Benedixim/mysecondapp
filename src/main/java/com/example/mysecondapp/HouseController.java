@@ -9,6 +9,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class HouseController {
@@ -32,10 +34,14 @@ public class HouseController {
     private Button menuForAdminers;
 
     @FXML
+    private ImageView openserverpanel;
+
+    @FXML
     void initialize() {
         menuForAdminers.setOnAction(actionEvent -> {
             openNewScene("usersTable.fxml");
         });
+
     }
 
     public void openNewScene(String window)
@@ -55,4 +61,7 @@ public class HouseController {
         stage.showAndWait();
     }
 
+    public void openServerPanel(MouseEvent mouseEvent) {
+        openNewScene("server.fxml");
+    }
 }
